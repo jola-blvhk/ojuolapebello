@@ -28,8 +28,8 @@ const SideBar = () => {
   const year = new Date().getFullYear();
   return (
     <div className="grid h-full justify-between  border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
-      <div className=" grid justify-between divide-y pb-4 space-y-6  divide-secondary-orange-100/10  h-full">
-        <div>
+      <div className=" grid justify-between pb-4 gap-y-6   h-full">
+        <div className="border-b border-secondary-orange-100/10 pb-6">
           <Image
             src={Logo}
             alt="logo"
@@ -37,17 +37,19 @@ const SideBar = () => {
             height={93}
             className="mb-6 md:mb-8"
           />
-          <h1 className=" text-xl md:text-2xl mb-2  md:mb-4">A Design Studio for founders</h1>
+          <h1 className=" text-xl md:text-2xl mb-2  md:mb-4">
+            A Design Studio for founders
+          </h1>
           <p className="text-primary-black-90 mb-4 text-sm md:text-base">
             Let us transform your ideas / vision and create captivating design
             experiences
           </p>
-          <div className=" space-y-[15px] md:space-y-[18px]">
+          <div className="grid gap-y-[12px] md:gap-y-[18px]">
             <Button text="Book a free consultation" color="orange" />
             <Button text="Follow us" color="transparent" />
           </div>
         </div>
-        <div className="space-y-3">
+        <div className="grid gap-y-3">
           {services.map((service, index) => (
             <div
               key={index}
@@ -70,7 +72,7 @@ const SideBar = () => {
             </div>
           ))}
         </div>
-        <div>
+        <div className="border-t border-secondary-orange-100/10 pt-6">
           <h1 className="text-base md:text-lg w-fit mb-4 text-primary-black-100 font-semibold">
             Some of our clients
           </h1>
@@ -78,7 +80,7 @@ const SideBar = () => {
             {clients?.map((client, index) => (
               <div
                 key={index}
-                className={`w-fit py-0.5 text-[12px] md:text-sm rounded-2xl border-2 border-primary-black-100/5 ${
+                className={`w-fit py-0.5 text-[13px] md:text-sm rounded-2xl border-2 border-primary-black-100/5 ${
                   index % 2 === 0 ? "px-4" : "px-6"
                 }`}
               >
