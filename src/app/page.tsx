@@ -1,33 +1,12 @@
-"use client";
+"use client"
 
 import "animate.css";
 import "animate.css/animate.min.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SideBar from "@/components/Sidebar";
-import { RiArrowDropLeftLine } from "react-icons/ri";
 
 const Home = () => {
   const [activeService, setActiveService] = useState<string>("");
-  const [showSidebar, setShowSidebar] = useState<boolean>(true);
-
-  // Set default active service to "Product Design" on large screens
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 1024px)");
-    if (mediaQuery.matches) {
-      setActiveService("Product Design");
-    }
-
-    const handleResize = () => {
-      if (mediaQuery.matches) {
-        setActiveService("Product Design");
-      } else {
-        setActiveService("");
-      }
-    };
-
-    mediaQuery.addListener(handleResize);
-    return () => mediaQuery.removeListener(handleResize);
-  }, []);
 
   const renderContent = () => {
     switch (activeService.toLowerCase().replace(/ /g, "")) {
@@ -47,31 +26,14 @@ const Home = () => {
   };
 
   return (
-    <main className="bg-white lg:flex w-full">
-      {showSidebar && (
-        <div className="w-full lg:w-[35%] xl:w-[28%] h-screen">
-          <SideBar
-            activeService={activeService}
-            setActiveService={(service) => {
-              setActiveService(service);
-              setShowSidebar(false);
-            }}
-          />
-        </div>
-      )}
-      <div className={`flex-1 m-5 ${showSidebar ? "hidden md:block" : ""}`}>
-        <div className="relative">
-          {!showSidebar && (
-            <button
-              className=" top-2 left-2 md:hidden"
-              onClick={() => setShowSidebar(true)}
-            >
-              <RiArrowDropLeftLine size={24} />
-            </button>
-          )}
-          {renderContent()}
-        </div>
+    <main className="bg-white md:flex w-full">
+      <div className="w-full lg:w-[35%] xl:w-[28%] h-screen">
+        <SideBar
+          activeService={activeService}
+          setActiveService={setActiveService}
+        />
       </div>
+      <div className="flex-1 m-5 border border-red-500">{renderContent()}</div>
     </main>
   );
 };
