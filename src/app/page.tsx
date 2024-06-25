@@ -1,12 +1,31 @@
-"use client"
+"use client";
 
 import "animate.css";
 import "animate.css/animate.min.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SideBar from "@/components/Sidebar";
+import { RiArrowDropLeftLine } from "react-icons/ri";
 
 const Home = () => {
-  const [activeService, setActiveService] = useState<string>("");
+  const [activeService, setActiveService] = useState<string>("productdesign");
+  const [showSidebar, setShowSidebar] = useState<boolean>(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setShowSidebar(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Set initial state
+    if (window.innerWidth >= 1024) {
+      setShowSidebar(true);
+    }
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const renderContent = () => {
     switch (activeService.toLowerCase().replace(/ /g, "")) {
@@ -26,14 +45,40 @@ const Home = () => {
   };
 
   return (
-    <main className="bg-white md:flex w-full">
-      <div className="w-full lg:w-[35%] xl:w-[28%] h-screen">
+    <main className="bg-white lg:flex w-full">
+      <div
+        className={`w-full lg:w-[35%] xl:w-[28%] h-screen ${
+          !showSidebar && "hidden lg:block"
+        }`}
+      >
         <SideBar
           activeService={activeService}
-          setActiveService={setActiveService}
+          setActiveService={(service) => {
+            setActiveService(service);
+            if (window.innerWidth < 1024) {
+              setShowSidebar(false);
+            }
+          }}
         />
       </div>
-      <div className="flex-1 m-5 border border-red-500">{renderContent()}</div>
+
+      <div
+        className={`flex-1 m-5 border border-red-500 ${
+          showSidebar && "hidden lg:block"
+        }`}
+      >
+        <div className="relative">
+          {!showSidebar && (
+            <button
+              className="top-2 left-2 lg:hidden"
+              onClick={() => setShowSidebar(true)}
+            >
+              <RiArrowDropLeftLine size={24} />
+            </button>
+          )}
+          {renderContent()}
+        </div>
+      </div>
     </main>
   );
 };
