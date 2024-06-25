@@ -37,12 +37,12 @@ const SideBar = () => {
             height={93}
             className="mb-6 md:mb-8"
           />
-          <h1 className=" text-xl md:text-2xl  mb-4">A Design Studio for founders</h1>
+          <h1 className=" text-xl md:text-2xl mb-2  md:mb-4">A Design Studio for founders</h1>
           <p className="text-primary-black-90 mb-4 text-sm md:text-base">
             Let us transform your ideas / vision and create captivating design
             experiences
           </p>
-          <div className="space-y-[18px]">
+          <div className=" space-y-[15px] md:space-y-[18px]">
             <Button text="Book a free consultation" color="orange" />
             <Button text="Follow us" color="transparent" />
           </div>
