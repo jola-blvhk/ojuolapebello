@@ -62,11 +62,7 @@ const Home = () => {
         />
       </div>
 
-      <div
-        className={`flex-1 m-5 border border-red-500 ${
-          showSidebar && "hidden lg:block"
-        }`}
-      >
+      <div className={`flex-1 m-5  ${showSidebar && "hidden lg:block"}`}>
         <div className="relative">
           {!showSidebar && (
             <button
