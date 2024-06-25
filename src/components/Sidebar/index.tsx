@@ -15,12 +15,14 @@ const SideBar = () => {
   ];
 
   const clients = [
-    "Spaces Design",
-    "PIKD",
-    "Twitter",
-    "Amazon",
+    "Indeed",
     "Equipe Technique",
-    "Netflix",
+    "PIKD",
+    "Hardsands Tech",
+    "Mango Nomads",
+    "Copypress",
+    "Spaces Marketplace",
+    "VPN Overview",
   ];
 
   const [activeService, setActiveService] = useState("");

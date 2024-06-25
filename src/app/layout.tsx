@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import SideBar from "@/components/Sidebar";
+import "animate.css";
+import "animate.css/animate.min.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,11 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` md:flex  ${poppins.className}`}>
-        <div className=" w-full   lg:w-[35%] xl:w-[28%] h-screen">
+      <body className={`bg-white md:flex  ${poppins.className}`}>
+        <div className=" w-full   lg:w-[35%] xl:w-[30%] h-screen">
           <SideBar />
         </div>
-        <div className=""> {children}</div>
+        <div className="  h-full w-full m-5 ">
+          <div className=" ">{children}</div>
+        </div>
       </body>
     </html>
   );
