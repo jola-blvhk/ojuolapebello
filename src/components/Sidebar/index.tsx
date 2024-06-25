@@ -37,8 +37,8 @@ const SideBar = () => {
             height={93}
             className="mb-8"
           />
-          <h1 className="text-2xl mb-4">A Design Studio for founders</h1>
-          <p className="text-primary-black-90 mb-4">
+          <h1 className="text-2xl  mb-4">A Design Studio for founders</h1>
+          <p className="text-primary-black-90 mb-4 text-sm md:text-base">
             Let us transform your ideas / vision and create captivating design
             experiences
           </p>
@@ -58,7 +58,7 @@ const SideBar = () => {
               }`}
             >
               <p
-                className={` text-lg w-fit `}
+                className={` text-base md:text-lg w-fit `}
                 tabIndex={1}
                 onClick={() => setActiveService(service)}
               >
@@ -71,7 +71,7 @@ const SideBar = () => {
           ))}
         </div>
         <div>
-          <h1 className="text-lg w-fit mb-4 text-primary-black-100 font-semibold">
+          <h1 className="text-base md:text-lg w-fit mb-4 text-primary-black-100 font-semibold">
             Some of our clients
           </h1>
           <div className="flex flex-wrap gap-y-3 gap-x-2">

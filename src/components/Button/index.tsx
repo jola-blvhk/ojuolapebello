@@ -12,7 +12,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <div
-      className={`w-full py-3 cursor-pointer ${className || ""} ${
+      className={`w-full py-3 text-sm md:text-base cursor-pointer ${className || ""} ${
         color === "orange" &&
         "bg-secondary-orange-100 border-secondary-orange-100/20 text-white hover:bg-secondary-orange-100/50"
       }  ${
