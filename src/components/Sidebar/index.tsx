@@ -53,14 +53,14 @@ const SideBar = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`flex items-center gap-5  cursor-pointer  ${
+              className={`flex items-center gap-5  w-fit cursor-pointer  ${
                 activeService === service
                   ? "text-primary-black-100 font-semibold"
                   : "text-primary-grey-100 hover:text-primary-black-100 hover:font-semibold"
               }`}
             >
               <p
-                className={` text-base md:text-lg w-fit `}
+                className={` text-base md:text-lg  `}
                 tabIndex={1}
                 onClick={() => setActiveService(service)}
               >
