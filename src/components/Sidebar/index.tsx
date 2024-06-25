@@ -78,7 +78,7 @@ const SideBar = () => {
             {clients?.map((client, index) => (
               <div
                 key={index}
-                className={`w-fit py-0.5 text-sm rounded-2xl border-2 border-primary-black-100/5 ${
+                className={`w-fit py-0.5 text-[12px] md:text-sm rounded-2xl border-2 border-primary-black-100/5 ${
                   index % 2 === 0 ? "px-4" : "px-6"
                 }`}
               >
