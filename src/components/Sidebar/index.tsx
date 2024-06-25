@@ -27,7 +27,7 @@ const SideBar = () => {
 
   const year = new Date().getFullYear();
   return (
-    <div className="grid h-full justify-between  border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[25px] md:py-[30px]">
+    <div className="grid h-full justify-between  border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className=" grid justify-between divide-y pb-4 space-y-6  divide-secondary-orange-100/10  h-full">
         <div>
           <Image
