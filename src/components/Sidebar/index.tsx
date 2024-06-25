@@ -27,7 +27,7 @@ const SideBar = () => {
 
   const year = new Date().getFullYear();
   return (
-    <div className="grid h-full justify-between  border-r border-secondary-orange-100/10  px-[34px] py-[30px]">
+    <div className="grid h-full justify-between  border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[25px] md:py-[30px]">
       <div className=" grid justify-between divide-y pb-4 space-y-6  divide-secondary-orange-100/10  h-full">
         <div>
           <Image
@@ -35,9 +35,9 @@ const SideBar = () => {
             alt="logo"
             width={93}
             height={93}
-            className="mb-8"
+            className="mb-6 md:mb-8"
           />
-          <h1 className="text-2xl  mb-4">A Design Studio for founders</h1>
+          <h1 className=" text-xl md:text-2xl  mb-4">A Design Studio for founders</h1>
           <p className="text-primary-black-90 mb-4 text-sm md:text-base">
             Let us transform your ideas / vision and create captivating design
             experiences
