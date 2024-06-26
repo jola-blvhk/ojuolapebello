@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import "animate.css";
 import "animate.css/animate.min.css";
@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import SideBar from "@/components/Sidebar";
 import { RiArrowDropLeftLine } from "react-icons/ri";
 import Services from "@/components/Services";
+import BackButton from "@/components/back-button";
 
 const Home = () => {
   const [activeService, setActiveService] = useState<string>("product design");
@@ -48,18 +49,21 @@ const Home = () => {
         />
       </div>
 
-      <div className={`flex-1 overflow-y-scroll px-5 md:px-9  py-6 ${showSidebar && "hidden lg:block"}`}>
+      <div
+        className={`flex-1 overflow-y-scroll px-5 md:px-9  py-6 ${
+          showSidebar && "hidden lg:block"
+        }`}
+      >
         <div className="relative">
           {!showSidebar && (
-            <button
-              className="top-2 left-2 lg:hidden"
-              onClick={() => {
-                setShowSidebar(true);
-                setActiveService(""); // Reset active service on small screens
-              }}
-            >
-              <RiArrowDropLeftLine size={24} />
-            </button>
+            <div className="lg:hidden  mb-7">
+              <BackButton
+                onclick={() => {
+                  setShowSidebar(true);
+                  setActiveService(""); // Reset active service on small screens
+                }}
+              />
+            </div>
           )}
           <Services activeService={activeService} />
         </div>
