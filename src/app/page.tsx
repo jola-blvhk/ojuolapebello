@@ -66,7 +66,7 @@ const Home = () => {
                 }}
               />
               <h2 className="text-center text-[#2C2C2C] font-medium text-lg">{activeService}</h2>
-              <Image src={GuabaIcon} alt="guaba-icon" width={30}  height={37}/>
+              <Image src={GuabaIcon} alt="guaba-icon" width={33}  height={40}/>
             </div>
           )}
           <Services activeService={activeService} />
