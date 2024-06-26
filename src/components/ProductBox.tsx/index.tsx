@@ -7,7 +7,7 @@ interface ProductBoxProps {
 }
 const ProductBox: React.FC<ProductBoxProps> = ({ project }) => {
   return (
-    <div className="h-[200px] relative md:h-[350px] pt-6 lg:h-[402px] cursor-pointer w-full rounded md:rounded-[10px] bg-[#F7F7F7]">
+    <div className="h-[200px] relative md:h-[350px] pt-6 pb-0.5 lg:h-[402px] cursor-pointer w-full rounded md:rounded-[10px] bg-[#F7F7F7]">
       <div className="relative  w-full h-full ">
         <Image
           src={project.imageSrc}

@@ -3,7 +3,11 @@ import NFTTrace from "/public/services/NFTTrace.png";
 import Hardsands from "/public/services/Hardsands.png";
 import Spaces from "/public/services/Spaces.png";
 import Becomy from "/public/services/Becomy.png";
+import Molang from "/public/services/molang.png";
+import Hardsandscard from "/public/services/hardsandscard.png";
+import Mango from "/public/services/mango.png";
 import ProductBox from "../ProductBox.tsx";
+
 import { Project } from "@/types/index.js";
 
 const services = [
@@ -40,7 +44,7 @@ const services = [
       {
         id: 1,
         title: "Hi, I’m Molang interactive 3D : click to interact",
-        imageSrc: "/path/to/your/image.png",
+        imageSrc: Molang,
       },
     ],
   },
@@ -51,12 +55,12 @@ const services = [
       {
         id: 1,
         title: "Mango Nomads",
-        imageSrc: "/path/to/your/image.png",
+        imageSrc: Mango,
       },
       {
         id: 2,
         title: "Hardsands CRM (Customer relationship Platform) Platform",
-        imageSrc: "/path/to/your/image.png",
+        imageSrc: Hardsandscard,
       },
     ],
   },
@@ -86,7 +90,6 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
   const activeProjects = services.find(
     (service) => service.title === activeService.toLowerCase()
   )?.projects;
-
 
   return (
     <div className="grid gap-y-6 md:gap-y-8 ">
