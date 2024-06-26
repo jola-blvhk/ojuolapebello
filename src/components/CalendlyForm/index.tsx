@@ -1,11 +1,9 @@
 import Script from "next/script";
 
 const CalendlyForm = ({ type }: { type?: string }) => {
-  const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME;
-  const showDetails: number =
-    process.env.NEXT_PUBLIC_CALENDLY_SHOW_DETAILS == "false" ? 1 : 0;
-  const showCookies: number =
-    process.env.NEXT_PUBLIC_CALENDLY_SHOW_COOKIES == "false" ? 1 : 0;
+  const username = "awujoolabello";
+  const showDetails: number = 0;
+  const showCookies: number = 0;
 
   return (
     <>
@@ -26,3 +24,5 @@ const CalendlyForm = ({ type }: { type?: string }) => {
 };
 
 export default CalendlyForm;
+
+
