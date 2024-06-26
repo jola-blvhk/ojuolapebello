@@ -48,7 +48,7 @@ const Home = () => {
         />
       </div>
 
-      <div className={`flex-1 overflow-y-scroll px-9  py-6 ${showSidebar && "hidden lg:block"}`}>
+      <div className={`flex-1 overflow-y-scroll px-5 md:px-9  py-6 ${showSidebar && "hidden lg:block"}`}>
         <div className="relative">
           {!showSidebar && (
             <button
