@@ -65,8 +65,8 @@ const Home = () => {
                   setActiveService(""); // Reset active service on small screens
                 }}
               />
-              <h2 className="text-center text-[#2C2C2C] font-medium text-xl">{activeService}</h2>
-              <Image src={GuabaIcon} alt="guaba-icon" width={35}  height={42}/>
+              <h2 className="text-center text-[#2C2C2C] font-medium text-lg">{activeService}</h2>
+              <Image src={GuabaIcon} alt="guaba-icon" width={30}  height={37}/>
             </div>
           )}
           <Services activeService={activeService} />
