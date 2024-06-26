@@ -7,6 +7,8 @@ import SideBar from "@/components/Sidebar";
 import { RiArrowDropLeftLine } from "react-icons/ri";
 import Services from "@/components/Services";
 import BackButton from "@/components/back-button";
+import GuabaIcon from "/public/guaba-icon.svg";
+import Image from "next/image";
 
 const Home = () => {
   const [activeService, setActiveService] = useState<string>("product design");
@@ -56,13 +58,15 @@ const Home = () => {
       >
         <div className="relative">
           {!showSidebar && (
-            <div className="lg:hidden  mb-7">
+            <div className=" flex justify-between items-center lg:hidden  mb-7">
               <BackButton
                 onclick={() => {
                   setShowSidebar(true);
                   setActiveService(""); // Reset active service on small screens
                 }}
               />
+              <h2 className="text-center text-[#2C2C2C] font-medium text-xl">{activeService}</h2>
+              <Image src={GuabaIcon} alt="guaba-icon" width={35}  height={42}/>
             </div>
           )}
           <Services activeService={activeService} />
