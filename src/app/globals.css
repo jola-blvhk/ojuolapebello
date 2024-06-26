@@ -16,6 +16,10 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .bg-clip-border {
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+  }
 }
 
 @layer components {

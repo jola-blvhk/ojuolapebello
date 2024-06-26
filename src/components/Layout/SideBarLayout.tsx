@@ -63,9 +63,7 @@ const SideBarLayout = () => {
                   : "text-primary-grey-100 hover:text-primary-black-100 hover:font-semibold"
               }`}
               onClick={() =>
-                activeService === service
-                  ? setActiveService("")
-                  : setActiveService(service)
+                activeService === service && setActiveService(service)
               }
             >
               <p className={` text-base md:text-lg  `} tabIndex={1}>
