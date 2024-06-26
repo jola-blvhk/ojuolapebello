@@ -7,7 +7,7 @@ import SideBar from "@/components/Sidebar";
 import { RiArrowDropLeftLine } from "react-icons/ri";
 
 const Home = () => {
-  const [activeService, setActiveService] = useState<string>("productdesign");
+  const [activeService, setActiveService] = useState<string>("");
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   useEffect(() => {
@@ -22,6 +22,7 @@ const Home = () => {
     // Set initial state
     if (window.innerWidth >= 1024) {
       setShowSidebar(true);
+      setActiveService("productdesign"); // Default active service for large screens
     }
 
     return () => window.removeEventListener("resize", handleResize);
@@ -62,12 +63,15 @@ const Home = () => {
         />
       </div>
 
-      <div className={`flex-1 m-5  ${showSidebar && "hidden lg:block"}`}>
+      <div className={`flex-1 m-5 ${showSidebar && "hidden lg:block"}`}>
         <div className="relative">
           {!showSidebar && (
             <button
               className="top-2 left-2 lg:hidden"
-              onClick={() => setShowSidebar(true)}
+              onClick={() => {
+                setShowSidebar(true);
+                setActiveService(""); // Reset active service on small screens
+              }}
             >
               <RiArrowDropLeftLine size={24} />
             </button>
