@@ -55,7 +55,11 @@ const SideBar: React.FC<SideBarProps> = ({
             experiences
           </p>
           <div className="grid gap-y-[12px] md:gap-y-[18px]">
-            <Button text="Book a free consultation" color="orange" />
+            <Button
+              text="Book a free consultation"
+              color="orange"
+              onclick={() => (window.location.href = "/calendlyform")}
+            />
             <Button text="Follow us" color="transparent" />
           </div>
         </div>

@@ -9,6 +9,7 @@ import Services from "@/components/Services";
 import BackButton from "@/components/back-button";
 import GuabaIcon from "/public/guaba-icon.svg";
 import Image from "next/image";
+import CalendlyForm from "@/components/CalendlyForm";
 
 const Home = () => {
   const [activeService, setActiveService] = useState<string>("product design");
@@ -35,6 +36,7 @@ const Home = () => {
 
   return (
     <main className="bg-white h-screen lg:flex w-full">
+      {/* <CalendlyForm /> */}
       <div
         className={`w-full  lg:w-[35%] xl:w-[28%] h-screen ${
           !showSidebar && "hidden lg:block"

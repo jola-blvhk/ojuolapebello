@@ -4,11 +4,13 @@ interface ButtonProps {
   text: string;
   color: string;
   className?: string;
+  onclick?: () => void;
 }
 const Button: React.FC<ButtonProps> = ({
   text,
   color = "orange",
   className,
+  onclick
 }) => {
   return (
     <div
@@ -18,7 +20,7 @@ const Button: React.FC<ButtonProps> = ({
       }  ${
         color === "transparent" &&
         "bg-transparent text-primary-black-100 border-primary-black-100/5 hover:bg-primary-white-90 "
-      } text-center border-2 rounded-[10px] `}
+      } text-center border-2 rounded-[10px] `} onClick={onclick}
     >
       {text}
     </div>
