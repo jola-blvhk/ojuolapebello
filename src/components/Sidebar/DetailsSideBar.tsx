@@ -25,7 +25,7 @@ const DetailsSideBar: React.FC<DetailsSideBarProps> = ({
       <div className="relative h-full z-10 grid justify-between">
         <div className="flex items-center h-fit justify-between">
           <BackButton onclick={() => handleBack()} white />
-          <Image src={GuabaIcon} alt="guaba-icon" width={35} height={30} />
+          <Image src={GuabaIcon} alt="guaba-icon" width={33} height={30} />
         </div>
 
         <div className="grid content-center justify-items-center">
