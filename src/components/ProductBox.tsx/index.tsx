@@ -16,9 +16,9 @@ const ProductBox: React.FC<ProductBoxProps> = ({ project }) => {
           className="w-full h-auto object-contain "
         />
       </div>
-      <div className="absolute bottom-0 w-full bg-gradient-to-r p-[1px] drop-shadow-lg h-[28%]  lg:h-[25%]  rounded md:rounded-[10px] from-secondary-orange-90/10 to-secondary-orange-100/20">
-        <div className=" h-full w-full  text-sm  md:text-base lg:text-lg   bg-[#f7f7f7] py-2 px-3  md:p-6 lg:p-8 grid items-center rounded md:rounded-[10px]">
-          <h4>{project?.title}</h4>
+      <div className="absolute bottom-0 w-full  bg-[#f7f7f7]/90  p-[1px]  drop-shadow h-[28%]  lg:h-[25%]  rounded md:rounded-[10px] ">
+        <div className=" h-full w-full  text-sm   md:text-base lg:text-lg    py-2 px-3  md:p-6 lg:p-8 grid items-center rounded md:rounded-[10px]">
+          <h4 className="blur-none">{project?.title}</h4>
         </div>
       </div>
     </div>
