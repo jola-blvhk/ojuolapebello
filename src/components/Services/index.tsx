@@ -1,4 +1,6 @@
 import React from "react";
+import ProductBox from "../ProductBox.tsx";
+import { Project } from "@/types/index.js";
 import NFTTrace from "/public/services/NFTTrace.png";
 import Hardsands from "/public/services/Hardsands.png";
 import Spaces from "/public/services/Spaces.png";
@@ -6,11 +8,12 @@ import Becomy from "/public/services/Becomy.png";
 import Molang from "/public/services/molang.png";
 import Hardsandscard from "/public/services/hardsandscard.png";
 import Mango from "/public/services/mango.png";
-import ProductBox from "../ProductBox.tsx";
 
-import { Project } from "@/types/index.js";
+interface ServicesProps {
+  activeService: string;
+}
 
-const services = [
+export const services = [
   {
     id: 1,
     title: "product design",
@@ -82,20 +85,30 @@ const services = [
   },
 ];
 
-interface ServicesProps {
-  activeService: string;
-}
-
 const Services: React.FC<ServicesProps> = ({ activeService }) => {
   const activeProjects = services.find(
     (service) => service.title === activeService.toLowerCase()
   )?.projects;
 
+  const handleClick = (title: string) => {
+    const urlTitle = title.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
+    window.location.href = `/productdesign/${urlTitle}`;
+  };
+
+  const handleProjectClick = (projectTitle: string) => {
+    if (activeService.toLowerCase() === "product design") {
+      handleClick(projectTitle);
+    }
+  };
   return (
-    <div className="grid gap-y-6 md:gap-y-8 ">
+    <div className="grid gap-y-6 md:gap-y-8">
       {activeProjects ? (
         activeProjects.map((project: Project) => (
-          <ProductBox key={project.id} project={project} />
+          <ProductBox
+            key={project.id}
+            project={project}
+            onclick={() => handleProjectClick(project.title)}
+          />
         ))
       ) : (
         <div>Select a service to see the content</div>
