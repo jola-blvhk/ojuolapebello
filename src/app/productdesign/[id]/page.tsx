@@ -33,7 +33,6 @@ const ProductDesignDetails = ({
       <ProductDesignPage
         brandBgImage={detail?.brandBgImage}
         brandLogo={detail?.brandLogo?.src}
-        date={detail?.date}
         brandName={detail?.brandName}
         description={detail?.description}
       />

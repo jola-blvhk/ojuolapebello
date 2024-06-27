@@ -6,7 +6,6 @@ interface DetailsLayoutProps {
   brandBgImage: any;
   children: React.ReactNode;
   brandLogo: any;
-  date: any;
   brandName: any;
   description: any;
 }
@@ -14,7 +13,6 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
   brandBgImage,
   children,
   brandLogo,
-  date,
   brandName,
   description,
 }) => {
@@ -24,7 +22,6 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
         <DetailsSideBar
           brandBgImage={brandBgImage}
           brandLogo={brandLogo}
-          date={date}
           brandName={brandName}
           description={description}
         />

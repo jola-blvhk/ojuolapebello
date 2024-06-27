@@ -2,19 +2,19 @@
 
 import React from "react";
 import { IoChevronBackOutline } from "react-icons/io5";
-import { useRouter } from "next/navigation";
 
 interface BackButtonProps {
   onclick?: () => void;
+  white?: boolean;
 }
-const BackButton: React.FC<BackButtonProps> = ({ onclick }) => {
-  const router = useRouter();
-  const handleBack = () => {
-    router.back();
-  };
+const BackButton: React.FC<BackButtonProps> = ({ onclick, white }) => {
   return (
     <div
-      className=" bg-[#FCFCFC7D] border border-secondary-orange-100/20 rounded-[10px] text-secondary-orange-100 cursor-pointer  md:rounded-[15px] w-fit p-4 md:p-5 hover:bg-secondary-orange-100/60 font-bold focus:bg-secondary-orange-100/60 focus:text-white  hover:text-white"
+      className={` border bg-[#FCFCFC]/50 ${
+        white
+          ? " text-white border-white hover:bg-transparent focus-transparent  "
+          : "bg-white text-secondary-orange-100  border-secondary-orange-100/20 hover:bg-secondary-orange-100/60 focus:bg-secondary-orange-100/60"
+      }    rounded-[10px] cursor-pointer  w-fit p-4   font-bold  focus:text-white  hover:text-white`}
       onClick={onclick}
     >
       <IoChevronBackOutline className="lg:text-lg" />
