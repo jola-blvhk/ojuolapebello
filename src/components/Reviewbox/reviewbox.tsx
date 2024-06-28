@@ -13,13 +13,13 @@ const ReviewBox: React.FC<ReviewBoxProps> = ({
   reviewerJobPosition,
 }) => {
   return (
-    <div>
-      <h3>{review}</h3>
-      <div className="flex">
-        <Avvvatars value={reviewerName} style="character" size={50} />
-        <div>
-          <h4>{reviewerName}</h4>
-          <p>{reviewerJobPosition}</p>
+    <div className="px-4 py-[18px] text-primary-black-90 md:px-[46px] md:py-7 rounded-[10px] border border-secondary-orange-100/30 grid gap-y-[14px] md:gap-y-4">
+      <h3 className="text-sm md:text-base ">{review}</h3>
+      <div className="flex gap-x-[9px]">
+        <Avvvatars value={reviewerName} style="character" size={55} />
+        <div className="text-sm md:text-base">
+          <h4 className="font-medium text-[#2c2c2c]">{reviewerName}</h4>
+          <p className=" text-[#676767]">{reviewerJobPosition}</p>
         </div>
       </div>
     </div>
