@@ -22,7 +22,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
 }) => {
   return (
     <div className="grid lg:flex">
-      <div className="w-full lg:w-[32%] xl:w-[25%] h-[500px] md:h-[700px] lg:h-screen ">
+      <div className="w-full lg:w-[32%] xl:w-[25%] h-[550px] md:h-[700px] lg:h-screen ">
         <DetailsSideBar
           brandBgImage={brandBgImage}
           brandLogo={brandLogo}
