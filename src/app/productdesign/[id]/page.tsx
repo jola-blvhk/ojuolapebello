@@ -25,6 +25,14 @@ const ProductDesignDetails = ({
     (item) => normalizeTitle(item.title) === normalizedId
   );
 
+  const renderLongDescription = (description: any) => {
+    return description.split("\n\n").map((paragraph: string, index: number) => (
+      <p key={index} className="pb-5 md:pb-6 lg:pb-7">
+        {paragraph}
+      </p>
+    ));
+  };
+
   return (
     <>
       <Head>
@@ -40,6 +48,7 @@ const ProductDesignDetails = ({
         review={detail?.review}
         reviewerName={detail?.reviewerName}
         reviewerJobPosition={detail?.reviewerJobPosition}
+        longDescription={renderLongDescription(detail?.longDescription)}
       />
     </>
   );

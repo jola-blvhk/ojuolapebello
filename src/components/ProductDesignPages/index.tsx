@@ -12,6 +12,7 @@ const ProductDesignPages = ({
   review,
   reviewerJobPosition,
   reviewerName,
+  longDescription,
 }: any) => {
   return (
     <DetailsLayout
@@ -24,12 +25,16 @@ const ProductDesignPages = ({
     >
       <div>
         {review && (
-          <ReviewBox
-            review={review}
-            reviewerJobPosition={reviewerJobPosition}
-            reviewerName={reviewerName}
-          />
+          <div className="mb-6 md:mb-10 lg:mb-12">
+            <ReviewBox
+              review={review}
+              reviewerJobPosition={reviewerJobPosition}
+              reviewerName={reviewerName}
+            />
+          </div>
         )}
+
+        <h3 className="text-sm md:text-base text-primary-black-90">{longDescription}</h3>
       </div>
     </DetailsLayout>
   );
