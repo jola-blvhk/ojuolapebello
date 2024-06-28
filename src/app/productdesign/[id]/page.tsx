@@ -37,6 +37,9 @@ const ProductDesignDetails = ({
         description={detail?.description}
         width={detail?.width}
         height={detail?.height}
+        review={detail?.review}
+        reviewerName={detail?.reviewerName}
+        reviewerJobPosition={detail?.reviewerJobPosition}
       />
     </>
   );

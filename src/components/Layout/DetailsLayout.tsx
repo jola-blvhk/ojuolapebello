@@ -33,7 +33,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
         />
       </div>
 
-      <main className="flex-1 overflow-y-scroll px-5 lg:px-9  py-6">
+      <main className="flex-1 overflow-y-scroll px-5 py-9 lg:py-7  lg:px-9 mx-auto max-w-[1100px] ">
         {children}
       </main>
     </div>

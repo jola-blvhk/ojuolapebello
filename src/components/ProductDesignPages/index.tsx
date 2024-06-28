@@ -1,24 +1,18 @@
 import React from "react";
 import DetailsLayout from "../Layout/DetailsLayout";
-import { StaticImageData } from "next/image";
+import ReviewBox from "../Reviewbox/reviewbox";
 
-interface ProductDesignPagesProps {
-  brandBgImage: any;
-  brandLogo: any;
-  brandName: any;
-  description: any;
-  width: any;
-  height: any;
-}
-
-const ProductDesignPages: React.FC<ProductDesignPagesProps> = ({
+const ProductDesignPages = ({
   brandBgImage,
   brandLogo,
   brandName,
   description,
   width,
   height,
-}) => {
+  review,
+  reviewerJobPosition,
+  reviewerName,
+}: any) => {
   return (
     <DetailsLayout
       brandBgImage={brandBgImage}
@@ -29,10 +23,13 @@ const ProductDesignPages: React.FC<ProductDesignPagesProps> = ({
       height={height}
     >
       <div>
-        <h1>{brandName}</h1>
-        <p>{description}</p>
-
-        {/* Add more content here as needed */}
+        {review && (
+          <ReviewBox
+            review={review}
+            reviewerJobPosition={reviewerJobPosition}
+            reviewerName={reviewerName}
+          />
+        )}
       </div>
     </DetailsLayout>
   );
