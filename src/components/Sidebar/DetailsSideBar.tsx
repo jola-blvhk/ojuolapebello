@@ -9,12 +9,16 @@ interface DetailsSideBarProps {
   brandLogo: any;
   brandName: any;
   description: any;
+  width: any;
+  height: any;
 }
 const DetailsSideBar: React.FC<DetailsSideBarProps> = ({
   brandBgImage,
   brandLogo,
   brandName,
   description,
+  width,
+  height,
 }) => {
   const router = useRouter();
   const handleBack = () => {
@@ -25,20 +29,22 @@ const DetailsSideBar: React.FC<DetailsSideBarProps> = ({
       <div className="relative h-full z-10 grid justify-between">
         <div className="flex items-center h-fit justify-between">
           <BackButton onclick={() => handleBack()} white />
-          <Image src={GuabaIcon} alt="guaba-icon" width={33} height={30} />
+          <Image src={GuabaIcon} alt="guaba-icon" width={32} height={30} />
         </div>
 
         <div className="grid content-center justify-items-center">
           <Image
             src={brandLogo}
             alt="brandName"
-            width={60}
-            height={80}
+            width={width}
+            height={height}
             objectFit="contain m-auto w-fit h-fit"
           />
         </div>
         <div className="grid content-end align-bottom gap-y-1 md:gap-y-2">
-          <h2 className="font-semibold text-lg md:text-xl lg:text-2xl">{brandName}</h2>
+          <h2 className="font-semibold text-lg md:text-xl lg:text-2xl">
+            {brandName}
+          </h2>
           <p className=" text-sm md:text-base xl:leading-6">{description}</p>
         </div>
       </div>

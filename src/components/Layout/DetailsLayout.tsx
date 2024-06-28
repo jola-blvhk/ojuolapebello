@@ -8,6 +8,8 @@ interface DetailsLayoutProps {
   brandLogo: any;
   brandName: any;
   description: any;
+  width: any;
+  height: any;
 }
 const DetailsLayout: React.FC<DetailsLayoutProps> = ({
   brandBgImage,
@@ -15,6 +17,8 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
   brandLogo,
   brandName,
   description,
+  width,
+  height,
 }) => {
   return (
     <div className="grid lg:flex">
@@ -24,6 +28,8 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
           brandLogo={brandLogo}
           brandName={brandName}
           description={description}
+          width={width}
+          height={height}
         />
       </div>
 

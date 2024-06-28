@@ -35,6 +35,8 @@ const ProductDesignDetails = ({
         brandLogo={detail?.brandLogo?.src}
         brandName={detail?.brandName}
         description={detail?.description}
+        width={detail?.width}
+        height={detail?.height}
       />
     </>
   );

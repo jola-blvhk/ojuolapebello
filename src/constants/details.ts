@@ -16,6 +16,8 @@ export const details = [
     brandName: "NFTrace by PIKD",
     description:
       "Pikd  engages users to win items like NFT collectibles within 5meters on their AR screen. Users earn points for collecting items, inviting friends, and engaging on social media. ",
+    width: 70,
+    height: 120,
   },
   {
     id: "2",
@@ -25,6 +27,8 @@ export const details = [
     brandName: "Hardsands CRM",
     description:
       "Hardsands CRM is a customer relationship management platform that helps businesses manage interactions with current and potential customers. ",
+    width: 100,
+    height: 100,
   },
   {
     id: "3",
@@ -34,6 +38,8 @@ export const details = [
     brandName: "Spaces Interior Marketplace",
     description:
       "A Your one stop market place for all things furniture, accessories and more. A Your one stop market place for all things furniture, accessories and more.",
+    width: 170,
+    height: 60,
   },
   {
     id: "4",
@@ -42,6 +48,8 @@ export const details = [
     brandLogo: BecomyLogo,
     brandName: "Becomy Page Builder",
     description:
-      "5 minutes to create your site 100% customizable, optimized for conversion and without commissionse ",
+      "5 minutes to create your site 100% customizable, optimized for conversion and without commissions",
+    width: 190,
+    height: 50,
   },
 ];

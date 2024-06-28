@@ -7,6 +7,8 @@ interface ProductDesignPagesProps {
   brandLogo: any;
   brandName: any;
   description: any;
+  width: any;
+  height: any;
 }
 
 const ProductDesignPages: React.FC<ProductDesignPagesProps> = ({
@@ -14,6 +16,8 @@ const ProductDesignPages: React.FC<ProductDesignPagesProps> = ({
   brandLogo,
   brandName,
   description,
+  width,
+  height,
 }) => {
   return (
     <DetailsLayout
@@ -21,6 +25,8 @@ const ProductDesignPages: React.FC<ProductDesignPagesProps> = ({
       brandLogo={brandLogo}
       brandName={brandName}
       description={description}
+      width={width}
+      height={height}
     >
       <div>
         <h1>{brandName}</h1>
