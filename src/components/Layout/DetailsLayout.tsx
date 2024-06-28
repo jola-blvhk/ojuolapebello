@@ -1,6 +1,6 @@
 import React from "react";
 import DetailsSideBar from "../Sidebar/DetailsSideBar";
-import { StaticImageData } from "next/image";
+
 
 interface DetailsLayoutProps {
   brandBgImage: any;

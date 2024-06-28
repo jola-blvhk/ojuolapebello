@@ -90,14 +90,16 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
     (service) => service.title === activeService.toLowerCase()
   )?.projects;
 
-  const handleClick = (title: string) => {
+  const handleClick = (title: string, urlService: string) => {
     const urlTitle = title.replace(/[^a-zA-Z0-9]/g, "").toLowerCase();
-    window.location.href = `/productdesign/${urlTitle}`;
+    window.location.href = `/${urlService}/${urlTitle}`;
   };
 
   const handleProjectClick = (projectTitle: string) => {
     if (activeService.toLowerCase() === "product design") {
-      handleClick(projectTitle);
+      handleClick(projectTitle, "productdesign");
+    } else if (activeService.toLowerCase() === "branding") {
+      handleClick(projectTitle, "branding");
     }
   };
   return (

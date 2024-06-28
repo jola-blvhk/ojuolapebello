@@ -3,17 +3,14 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import React from "react";
-import { productDesignDetails } from "@/constants/details";
+import { brandingDetails } from "@/constants/details";
 import { normalizeTitle } from "@/constants/functions";
 
-const ProductDesignPage = dynamic(
-  () => import("@/components/ProductDesignPages"),
-  {
-    ssr: false,
-  }
-);
+const BrandingPage = dynamic(() => import("@/components/BrandingPages"), {
+  ssr: false,
+});
 
-const ProductDesignDetails = ({
+const BrandingDetails = ({
   params,
 }: {
   params: {
@@ -21,16 +18,18 @@ const ProductDesignDetails = ({
   };
 }) => {
   const normalizedId = normalizeTitle(params.id);
-  const detail = productDesignDetails.find(
+  const detail = brandingDetails.find(
     (item) => normalizeTitle(item.title) === normalizedId
   );
 
   const renderLongDescription = (description: any) => {
-    return description.split("\n\n").map((paragraph: string, index: number) => (
-      <p key={index} className="pb-5 md:pb-6 lg:pb-7">
-        {paragraph}
-      </p>
-    ));
+    return description
+      ?.split("\n\n")
+      .map((paragraph: string, index: number) => (
+        <p key={index} className="pb-5 md:pb-6 lg:pb-7">
+          {paragraph}
+        </p>
+      ));
   };
 
   return (
@@ -38,7 +37,7 @@ const ProductDesignDetails = ({
       <Head>
         <title>{detail?.brandName} | Guaba</title>
       </Head>
-      <ProductDesignPage
+      <BrandingPage
         brandBgImage={detail?.brandBgImage}
         brandLogo={detail?.brandLogo?.src}
         brandName={detail?.brandName}
@@ -54,4 +53,4 @@ const ProductDesignDetails = ({
   );
 };
 
-export default ProductDesignDetails;
+export default BrandingDetails;
