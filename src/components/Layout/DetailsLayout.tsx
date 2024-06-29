@@ -1,7 +1,6 @@
 import React from "react";
 import DetailsSideBar from "../Sidebar/DetailsSideBar";
 
-
 interface DetailsLayoutProps {
   brandBgImage: any;
   children: React.ReactNode;
@@ -21,7 +20,7 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
   height,
 }) => {
   return (
-    <div className="grid lg:flex">
+    <div className="grid lg:flex h-screen w-full">
       <div className="w-full lg:w-[32%] xl:w-[25%] h-[550px] md:h-[700px] lg:h-screen ">
         <DetailsSideBar
           brandBgImage={brandBgImage}
@@ -33,8 +32,8 @@ const DetailsLayout: React.FC<DetailsLayoutProps> = ({
         />
       </div>
 
-      <main className="flex-1 overflow-y-scroll px-5 py-9 lg:py-7  lg:px-9 mx-auto max-w-[1100px] ">
-        {children}
+      <main className="flex-1 lg:overflow-y-scroll px-5 py-9 lg:py-7  lg:px-9 w-full">
+        <div className="relative max-w-[1100px] mx-auto">{children}</div>
       </main>
     </div>
   );

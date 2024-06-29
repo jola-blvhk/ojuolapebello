@@ -49,6 +49,7 @@ const ProductDesignDetails = ({
         reviewerName={detail?.reviewerName}
         reviewerJobPosition={detail?.reviewerJobPosition}
         longDescription={renderLongDescription(detail?.longDescription)}
+        descriptionImage={detail?.descriptionImage}
       />
     </>
   );

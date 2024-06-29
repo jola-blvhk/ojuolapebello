@@ -48,6 +48,7 @@ const BrandingDetails = ({
         reviewerName={detail?.reviewerName}
         reviewerJobPosition={detail?.reviewerJobPosition}
         longDescription={renderLongDescription(detail?.longDescription)}
+        descriptionImage={detail?.descriptionImage}
       />
     </>
   );
