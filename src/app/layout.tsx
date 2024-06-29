@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import SideBar from "@/components/Sidebar";
+
 import "animate.css";
 import "animate.css/animate.min.css";
+import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Guaba Design Studio",
@@ -23,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <body className={`bg-white  ${poppins.className}`}>
         {/* <div className=" w-full   lg:w-[35%] xl:w-[30%] h-screen">
           <SideBar />
