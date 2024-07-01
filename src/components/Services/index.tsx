@@ -100,6 +100,11 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       handleClick(projectTitle, "productdesign");
     } else if (activeService.toLowerCase() === "branding") {
       handleClick(projectTitle, "branding");
+    } else if (
+      activeService.toLowerCase() === "spline interactive 3d" &&
+      projectTitle === "Hi, I’m Molang interactive 3D : click to interact"
+    ) {
+      window.location.href = "https://molang-spline3d.vercel.app/";
     }
   };
   return (
