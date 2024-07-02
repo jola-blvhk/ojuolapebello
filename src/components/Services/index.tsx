@@ -8,6 +8,7 @@ import Becomy from "/public/services/Becomy.png";
 import Molang from "/public/services/molang.png";
 import Hardsandscard from "/public/services/hardsandscard.png";
 import Mango from "/public/services/mango.png";
+import AboutUs from "../AboutUs";
 
 interface ServicesProps {
   activeService: string;
@@ -107,6 +108,10 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       window.location.href = "https://molang-spline3d.vercel.app/";
     }
   };
+
+  if (activeService.toLowerCase() === "about us") {
+    return <AboutUs />;
+  }
   return (
     <div className="grid gap-y-6 md:gap-y-8">
       {activeProjects ? (
