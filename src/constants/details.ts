@@ -64,11 +64,11 @@ export const productDesignDetails = [
     width: 170,
     height: 60,
     review:
-      "I had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity.",
+      "They brought my vision to reality! i wanted clean, straight forward and simple to user interfaces by even the most not technically inclined user and they came through. Thank you very much Guaba Designs.",
     reviewerName: "Ojuolape Bello",
     reviewerJobPosition: "Co Founder",
     longDescription:
-      "I had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity. \n\nI had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their \n\n\nI had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their",
+      "Spaces Interior market place is a one stop shop to all things interior decor and wears. Users can shop by Item or Vendors and have their items delivered to them in an y part of the world. This is a solution to the fast growing interior industry.",
     descriptionImage: SpacesDesc,
   },
   {
@@ -95,15 +95,11 @@ export const brandingDetails = [
     brandLogo: MangoLogo,
     brandName: "Mango Nomads",
     description:
-      "Pikd engages users to win items like NFT collectibles within 5 meters on their AR screen. Users earn points for collecting items, inviting friends, and engaging on social media.",
+      "Mango Nomads is a travel community by and for Africans, aiming to unite those in Africa and the diaspora around shared experiences and a love for exploration.",
     width: 180,
     height: 130,
-    review:
-      "I had the pleasure of collaborating with this designer. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity.",
-    reviewerName: "Purevsuren Adiyasuren",
-    reviewerJobPosition: "Snr Eng",
     longDescription:
-      "More than a buzzword - NFTrace unlocks the power of digital collectibles with our AR-powered platform. Connect with brands, businesses, and communities through real-world use cases and engage Gen Z like never before by exploring a new dimension of acquiring NFT collectibles and rewards. Player explores the map around  and Find NFTs that are created and shared by their original creator. Player can collect these NFTS for free. AR Camera sees these NFTs nearby 5 meters around in an augmented reality scene.",
+      "Mango Nomads is a travel community by and for Africans, aiming to unite those in Africa and the diaspora around shared experiences and a love for exploration. \n\n Mango Nomads seeks to embody the joy, adventure, and sense of belonging that come with travel. \n\nThe brand aims to stand out by offering a relatable community tailored uniquely for Africans. \n\n The brand aims to be a vibrant, and inviting space where members can connect and share their adventures.",
     descriptionImage: MangoDesc,
   },
 
@@ -118,11 +114,11 @@ export const brandingDetails = [
     width: 100,
     height: 100,
     review:
-      "I had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity.",
+      "Their ability to listen attentively to our feedback and transform it into tangible designs was truly commendable. They approached each conversation with an open mind, eager to comprehend our goals and aspirations for the brand.",
     reviewerName: "Okeke Felix",
     reviewerJobPosition: "Co Founder",
     longDescription:
-      "Empowering Business Relationships: This versatile CRM platform caters to the needs of both small and large-scale businesses. Seamlessly manage interactions, track leads, and nurture customer relationships through a user-friendly interface. From startups to enterprises, This CRM provides tailored solutions to enhance communication, streamline processes, and drive growth. Experience efficient collaboration, data-driven insights, and customer-centricity like never before. I was tasked with executing on the above opportunity. To deliver a unique experience that would provide the average business effective access to this kind of  service in the most convenient way possible. The final deliverable was a suite of 3 products. Hardsands Pro Web app, iOS App and Android app",
+      "Hardsands is a startup out of Lagos Nigeria. They are looking to develop an all-in-one contact card powered by tech for their customers, to elevate theirenetworking experience. Hardsands is looking to be positioned as a global brand built for customers around the world, starting from Nigeria.",
     descriptionImage: HardsandsBrandingDesc,
   },
 ];
