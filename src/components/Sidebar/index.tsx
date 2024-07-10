@@ -1,10 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import Logo from "/public/logo.svg";
 import Button from "../Button";
 import { RiArrowDropRightLine } from "react-icons/ri";
+import Link from "next/link";
+import Instagram from "/public/social-media/instagram.svg";
+import Linkedin from "/public/social-media/linkedin.svg";
+import Medium from "/public/social-media/medium.svg";
 
 interface SideBarProps {
   activeService: string;
@@ -34,10 +38,20 @@ const SideBar: React.FC<SideBarProps> = ({
     "VPN Overview",
   ];
 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+  const handleFollowUsClick = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   const year = new Date().getFullYear();
 
   return (
-    <div className="grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
+    <div className="relative grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className="grid justify-between pb-4 gap-y-6 h-full">
         <div className="border-b border-secondary-orange-100/10 pb-6">
           <Image
@@ -60,7 +74,11 @@ const SideBar: React.FC<SideBarProps> = ({
               color="orange"
               onclick={() => (window.location.href = "/calendlyform")}
             />
-            <Button text="Follow us" color="transparent" />
+            <Button
+              text="Follow us"
+              color="transparent"
+              onclick={handleFollowUsClick}
+            />
           </div>
         </div>
         <div className="grid gap-y-3">
@@ -110,6 +128,35 @@ const SideBar: React.FC<SideBarProps> = ({
           © Guaba Design Studio {year}
         </p>
       </div>
+
+      {isPopupOpen && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50"
+          onClick={handleClosePopup}
+        >
+          <div className="bg-white border border-secondary-orange-100/30 p-8 md:py-10 md:px-9 rounded-[10px] shadow-lg relative">
+            {/* <button
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              onClick={handleClosePopup}
+            >
+              &times;
+            </button> */}
+
+            <div className="flex gap-6  md:gap-10 items-center">
+              {/* Add your social media buttons or links here */}
+              <Link href="https://www.instagram.com/guabastudio/">
+                <Image src={Instagram} width={34} height={40} alt="instagram" />
+              </Link>
+              <Link href="https://www.linkedin.com/company/guaba-design-studio/">
+                <Image src={Linkedin} width={34} height={40} alt="linkedin" />
+              </Link>
+              <Link href="https://medium.com/@guabadesignstudio">
+                <Image src={Medium} width={100} height={50} alt="medium" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
