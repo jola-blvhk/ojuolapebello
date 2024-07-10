@@ -65,7 +65,7 @@ const SideBar: React.FC<SideBarProps> = ({
             A Design Studio for founders
           </h1>
           <p className="text-primary-black-90 mb-4 text-sm md:text-base">
-            Let us transform your ideas / vision and create captivating design
+            Let us transform your vision and create captivating design
             experiences
           </p>
           <div className="grid gap-y-[12px] md:gap-y-[18px]">
