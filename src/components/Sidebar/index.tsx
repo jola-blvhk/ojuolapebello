@@ -50,6 +50,8 @@ const SideBar: React.FC<SideBarProps> = ({
 
   const year = new Date().getFullYear();
 
+  console.log(activeService)
+
   return (
     <div className="relative grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className="grid justify-between pb-4 gap-y-6 h-full">
@@ -96,7 +98,7 @@ const SideBar: React.FC<SideBarProps> = ({
                   : setActiveService(service)
               }
             >
-              <p className="text-base md:text-lg" tabIndex={1}>
+              <p className="text-base md:text-lg">
                 {service}
               </p>
               <div className="w-5 h-5 bg-[#EDEDED] rounded-full grid items-center">
@@ -135,15 +137,7 @@ const SideBar: React.FC<SideBarProps> = ({
           onClick={handleClosePopup}
         >
           <div className="bg-white border border-secondary-orange-100/30 p-8 md:py-10 md:px-9 rounded-[10px] shadow-lg relative">
-            {/* <button
-              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
-              onClick={handleClosePopup}
-            >
-              &times;
-            </button> */}
-
             <div className="flex gap-6  md:gap-10 items-center">
-              {/* Add your social media buttons or links here */}
               <Link href="https://www.instagram.com/guabastudio/">
                 <Image src={Instagram} width={34} height={40} alt="instagram" />
               </Link>

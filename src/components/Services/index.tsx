@@ -123,7 +123,7 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
           />
         ))
       ) : (
-        <div>Select a service to see the content</div>
+        <div></div>
       )}
     </div>
   );

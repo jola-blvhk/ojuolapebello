@@ -4,40 +4,42 @@ import "animate.css";
 import "animate.css/animate.min.css";
 import { useEffect, useState } from "react";
 import SideBar from "@/components/Sidebar";
-import { RiArrowDropLeftLine } from "react-icons/ri";
 import Services from "@/components/Services";
 import BackButton from "@/components/back-button";
 import GuabaIcon from "/public/guaba-icon.svg";
 import Image from "next/image";
 
 const Home = () => {
-  const [activeService, setActiveService] = useState<string>("product design");
+  const [activeService, setActiveService] = useState<string>("");
   const [showSidebar, setShowSidebar] = useState<boolean>(true);
 
   useEffect(() => {
+    const setInitialActiveService = () => {
+      if (window.innerWidth >= 1024) {
+        setActiveService("Product Design");
+      }
+    };
+
+    setInitialActiveService();
+
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
         setShowSidebar(true);
-        setActiveService("product design");
+        setActiveService("Product Design");
+      } else {
+        setActiveService("");
       }
     };
 
     window.addEventListener("resize", handleResize);
-
-    // Set initial state
-    if (window.innerWidth >= 1024) {
-      setShowSidebar(true);
-      setActiveService("product design");
-    }
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <main className="bg-white h-screen lg:flex w-full">
-      {/* <CalendlyForm /> */}
       <div
-        className={`w-full  lg:w-[35%] xl:w-[28%] h-screen ${
+        className={`w-full lg:w-[35%] xl:w-[28%] h-screen ${
           !showSidebar && "hidden lg:block"
         }`}
       >
@@ -53,13 +55,13 @@ const Home = () => {
       </div>
 
       <div
-        className={`flex-1 overflow-y-scroll px-5 md:px-9  py-6 ${
+        className={`flex-1 overflow-y-scroll px-5 md:px-9 py-6 ${
           showSidebar && "hidden lg:block"
         }`}
       >
         <div className="relative">
           {!showSidebar && (
-            <div className=" flex justify-between items-center lg:hidden  mb-7">
+            <div className="flex justify-between items-center lg:hidden mb-7">
               <BackButton
                 onclick={() => {
                   setShowSidebar(true);
