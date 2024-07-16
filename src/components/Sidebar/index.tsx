@@ -50,8 +50,6 @@ const SideBar: React.FC<SideBarProps> = ({
 
   const year = new Date().getFullYear();
 
-  
-
   return (
     <div className="relative grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className="grid justify-between pb-4 gap-y-6 h-full">
@@ -74,7 +72,10 @@ const SideBar: React.FC<SideBarProps> = ({
             <Button
               text="Book a free consultation"
               color="orange"
-              onclick={() => (window.location.href = "/calendlyform")}
+              onclick={() =>
+                (window.location.href =
+                  "https://calendar.app.google/JtTW6YDohxuXyNL27")
+              }
             />
             <Button
               text="Follow us"
@@ -98,9 +99,7 @@ const SideBar: React.FC<SideBarProps> = ({
                   : setActiveService(service)
               }
             >
-              <p className="text-base md:text-lg">
-                {service}
-              </p>
+              <p className="text-base md:text-lg">{service}</p>
               <div className="w-5 h-5 bg-[#EDEDED] rounded-full grid items-center">
                 <RiArrowDropRightLine className="m-auto text-secondary-orange-100 text-xl" />
               </div>
