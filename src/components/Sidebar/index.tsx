@@ -50,7 +50,7 @@ const SideBar: React.FC<SideBarProps> = ({
 
   const year = new Date().getFullYear();
 
-  console.log(activeService)
+  
 
   return (
     <div className="relative grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">

@@ -12,9 +12,18 @@ const ReviewBox: React.FC<ReviewBoxProps> = ({
   reviewerName,
   reviewerJobPosition,
 }) => {
+  const renderLongDescription = (description: any) => {
+    return description
+      ?.split("\n\n")
+      .map((paragraph: string, index: number) => (
+        <p key={index} className="text-sm md:text-base pb-1">
+          {paragraph}
+        </p>
+      ));
+  };
   return (
-    <div className="px-4 py-[18px] text-primary-black-90 md:px-[46px] md:py-7 rounded-[10px] border border-secondary-orange-100/30 grid gap-y-[14px] md:gap-y-4">
-      <h3 className="text-sm md:text-base ">{review}</h3>
+    <div className="px-4 py-[18px] text-primary-black-90 md:px-[46px] md:py-7 rounded-[10px] border border-secondary-orange-100/30 grid gap-y-[14px] md:gap-y-6">
+      <h3 className="text-sm md:text-base ">{renderLongDescription(review)}</h3>
       <div className="flex gap-x-[9px]">
         <Avvvatars value={reviewerName} style="character" size={53} />
         <div className="text-sm md:text-base">

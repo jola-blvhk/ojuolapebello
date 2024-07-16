@@ -8,6 +8,9 @@ import Becomy from "/public/services/Becomy.png";
 import Molang from "/public/services/molang.png";
 import Hardsandscard from "/public/services/hardsandscard.png";
 import Mango from "/public/services/mango.png";
+import Indeed from "/public/services/indeed.png";
+import Copypress from "/public/services/copypress.png";
+import VPNOverview from "/public/services/vpnoverview.png";
 import AboutUs from "../AboutUs";
 
 interface ServicesProps {
@@ -74,13 +77,18 @@ export const services = [
     projects: [
       {
         id: 1,
-        title: "Mango Nomads",
-        imageSrc: "/path/to/your/image.png",
+        title: "Indeed",
+        imageSrc: Indeed,
       },
       {
         id: 2,
-        title: "Hardsands CRM (Customer relationship Platform) Platform",
-        imageSrc: "/path/to/your/image.png",
+        title: "Copypress",
+        imageSrc: Copypress,
+      },
+      {
+        id: 2,
+        title: "VPNOverview",
+        imageSrc: VPNOverview,
       },
     ],
   },
@@ -106,6 +114,22 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       projectTitle === "Hi, I’m Molang interactive 3D : click to interact"
     ) {
       window.location.href = "https://molang-spline3d.vercel.app/";
+    } else if (
+      activeService.toLowerCase() === "copywriting" &&
+      projectTitle === "Indeed"
+    ) {
+      window.location.href = "https://ng.indeed.com/";
+    } else if (
+      activeService.toLowerCase() === "copywriting" &&
+      projectTitle === "Copypress"
+    ) {
+      window.location.href = "https://www.copypress.com/";
+    } else if (
+      activeService.toLowerCase() === "copywriting" &&
+      projectTitle === "VPNOverview"
+    ) {
+      window.location.href =
+        "https://vpnoverview.com/?_gl=1*16w9czs*_up*MQ.._ga*MjU5NTA3OTI2LjE3MTkxNDAzNTQ. _ga_V13F0K93MP*MTcxOTE0MDM1MS4xLjAuMTcxOTE0MDM1MS4wLjAuMA..";
     }
   };
 
