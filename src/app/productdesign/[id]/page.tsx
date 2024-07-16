@@ -6,6 +6,7 @@ import React from "react";
 import { productDesignDetails } from "@/constants/details";
 import { normalizeTitle } from "@/constants/functions";
 
+
 const ProductDesignPage = dynamic(
   () => import("@/components/ProductDesignPages"),
   {
@@ -51,6 +52,7 @@ const ProductDesignDetails = ({
         longDescription={renderLongDescription(detail?.longDescription)}
         descriptionImage={detail?.descriptionImage}
       />
+     
     </>
   );
 };

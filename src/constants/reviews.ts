@@ -1,4 +1,4 @@
-export const AllReviews = [
+export const AllReviewsforProjects = [
   {
     review:
       "I had the pleasure of collaborating with this designer. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity. ",

@@ -8,6 +8,7 @@ import Services from "@/components/Services";
 import BackButton from "@/components/back-button";
 import GuabaIcon from "/public/guaba-icon.svg";
 import Image from "next/image";
+import AllReviews from "../AllReviews";
 
 const Home = () => {
   const [activeService, setActiveService] = useState<string>("");
@@ -74,7 +75,10 @@ const Home = () => {
               <Image src={GuabaIcon} alt="guaba-icon" width={33} height={40} />
             </div>
           )}
-          <Services activeService={activeService} />
+          <div className="grid gap-16 md:gap-20">
+            <Services activeService={activeService} />
+            <AllReviews />
+          </div>
         </div>
       </div>
     </main>
