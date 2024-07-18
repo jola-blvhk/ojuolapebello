@@ -37,6 +37,7 @@ const Home = () => {
     // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  console.log(activeService)
   return (
     <main className="bg-white h-screen lg:flex w-full">
       <div
@@ -77,7 +78,11 @@ const Home = () => {
           )}
           <div className="grid gap-16 md:gap-20">
             <Services activeService={activeService} />
-            <div className="hidden lg:block">
+            <div
+              className={`hidden ${
+                activeService === "About us" ? "hidden" : "lg:block"
+              } `}
+            >
               <AllReviews />
             </div>
           </div>
