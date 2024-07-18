@@ -77,7 +77,9 @@ const Home = () => {
           )}
           <div className="grid gap-16 md:gap-20">
             <Services activeService={activeService} />
-            <AllReviews />
+            <div className="hidden lg:block">
+              <AllReviews />
+            </div>
           </div>
         </div>
       </div>
