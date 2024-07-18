@@ -52,7 +52,7 @@ const SideBar: React.FC<SideBarProps> = ({
   const year = new Date().getFullYear();
 
   return (
-    <div className="relative grid gap-y-8 lg:gap-y-0 h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
+    <div className="relative grid gap-y-6 lg:gap-y-0 h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className="grid justify-between pb-4 gap-y-6 h-full">
         <div className="border-b border-secondary-orange-100/10 pb-6">
           <Image
