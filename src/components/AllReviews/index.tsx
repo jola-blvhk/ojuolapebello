@@ -5,7 +5,7 @@ import ReviewBox from "../Reviewbox/reviewbox";
 const AllReviews = () => {
   return (
     <div>
-      <h1 className="font-semibold text-lg md:text-xl">
+      <h1 className="font-semibold text-base md:text-lg lg:text-xl">
         Feedback from Our Clients
       </h1>
 
@@ -13,10 +13,7 @@ const AllReviews = () => {
         {AllReviewsforProjects?.map((review, index) => {
           const alignmentClass = index % 2 === 0 ? "self-start" : "self-end";
           return (
-            <div
-              key={index}
-              className={`w-[90%]  ${alignmentClass}`}
-            >
+            <div key={index} className={`w-[90%]  ${alignmentClass}`}>
               <ReviewBox
                 review={review?.review}
                 reviewerName={review?.reviewerName}
