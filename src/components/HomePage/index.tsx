@@ -23,18 +23,18 @@ const Home = () => {
 
     setInitialActiveService();
 
-    const handleResize = () => {
-      if (window.innerWidth >= 1024) {
-        setShowSidebar(true);
-        setActiveService("Product Design");
-      } else {
-        setActiveService("");
-      }
-    };
+    // const handleResize = () => {
+    //   if (window.innerWidth >= 1024) {
+    //     setShowSidebar(true);
+    //     setActiveService("Product Design");
+    //   } else {
+    //     setActiveService("");
+    //   }
+    // };
 
-    window.addEventListener("resize", handleResize);
+    // window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
