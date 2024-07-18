@@ -9,6 +9,7 @@ import Link from "next/link";
 import Instagram from "/public/social-media/instagram.svg";
 import Linkedin from "/public/social-media/linkedin.svg";
 import Medium from "/public/social-media/medium.svg";
+import AllReviews from "../AllReviews";
 
 interface SideBarProps {
   activeService: string;
@@ -51,7 +52,7 @@ const SideBar: React.FC<SideBarProps> = ({
   const year = new Date().getFullYear();
 
   return (
-    <div className="relative grid h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
+    <div className="relative grid gap-y-8 lg:gap-y-0 h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
       <div className="grid justify-between pb-4 gap-y-6 h-full">
         <div className="border-b border-secondary-orange-100/10 pb-6">
           <Image
@@ -122,6 +123,9 @@ const SideBar: React.FC<SideBarProps> = ({
               </div>
             ))}
           </div>
+        </div>
+        <div className="lg:hidden border-t border-secondary-orange-100/10 pt-6">
+          <AllReviews />
         </div>
       </div>
       <div className="h-full place-content-end">

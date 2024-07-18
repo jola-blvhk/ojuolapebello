@@ -40,7 +40,7 @@ const Home = () => {
   return (
     <main className="bg-white h-screen lg:flex w-full">
       <div
-        className={`w-full lg:w-[35%] xl:w-[28%] h-screen ${
+        className={`w-full lg:w-[35%] xl:w-[28%] lg:h-screen ${
           !showSidebar && "hidden lg:block"
         }`}
       >

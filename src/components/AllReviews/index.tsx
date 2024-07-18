@@ -15,7 +15,7 @@ const AllReviews = () => {
           return (
             <div
               key={index}
-              className={`md:w-[90%]  ${alignmentClass}`}
+              className={`w-[90%]  ${alignmentClass}`}
             >
               <ReviewBox
                 review={review?.review}
