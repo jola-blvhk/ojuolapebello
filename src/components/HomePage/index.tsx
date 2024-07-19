@@ -78,13 +78,13 @@ const Home = () => {
           )}
           <div className="grid gap-16 md:gap-20">
             <Services activeService={activeService} />
-            <div
+            {/* <div
               className={`hidden ${
                 activeService === "About us" ? "hidden" : "lg:block"
               } `}
             >
               <AllReviews />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
