@@ -79,7 +79,7 @@ export const productDesignDetails = [
     brandName: "Becomy Page Builder",
     description:
       "5 minutes to create your site 100% customizable, optimized for conversion and without commissions.",
-    width: 190,
+    width: 170,
     height: 50,
     longDescription:
       "Becomy is a Saas E-Commerce Tool for online businesses to sell their products with unique marketing strategies and a customizeable page builder. I had the pleasure of collaborating with Guaba. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their",
