@@ -6,6 +6,7 @@ import Hardsands from "/public/services/Hardsands.png";
 import Spaces from "/public/services/Spaces.png";
 import Becomy from "/public/services/Becomy.png";
 import Molang from "/public/services/molang.png";
+import BlackGirl from "/public/services/black girl.jpg";
 import Hardsandscard from "/public/services/hardsandscard.png";
 import Mango from "/public/services/mango.png";
 import Indeed from "/public/services/indeed.png";
@@ -51,6 +52,11 @@ export const services = [
     projects: [
       {
         id: 1,
+        title: "Black Girl 3D",
+        imageSrc: BlackGirl,
+      },
+      {
+        id: 2,
         title: "Hi, I’m Molang interactive 3D : click to interact",
         imageSrc: Molang,
       },
@@ -115,6 +121,12 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       projectTitle === "Hi, I’m Molang interactive 3D : click to interact"
     ) {
       window.location.href = "https://molang-spline3d.vercel.app/";
+    } else if (
+      activeService.toLowerCase() === "spline interactive 3d" &&
+      projectTitle === "Black Girl 3D"
+    ) {
+      window.location.href =
+        "https://my.spline.design/blackgirl3d-7d478dcfacb23736d7b3eac706b42c3c/";
     } else if (
       activeService.toLowerCase() === "copywriting" &&
       projectTitle === "Indeed"

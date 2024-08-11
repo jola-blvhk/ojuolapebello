@@ -37,7 +37,7 @@ const Home = () => {
     // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  console.log(activeService)
+
   return (
     <main className="bg-white h-screen lg:flex w-full">
       <div
