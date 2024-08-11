@@ -12,6 +12,7 @@ import Indeed from "/public/services/indeed.png";
 import Copypress from "/public/services/copypress.png";
 import VPNOverview from "/public/services/vpnoverview.png";
 import AboutUs from "../AboutUs";
+import AllReviews from "../AllReviews";
 
 interface ServicesProps {
   activeService: string;
@@ -136,6 +137,8 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
   if (activeService.toLowerCase() === "about us") {
     return <AboutUs />;
   }
+
+  console.log(activeService);
   return (
     <div className="grid gap-y-6 md:gap-y-8">
       {activeProjects ? (
@@ -148,6 +151,11 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
         ))
       ) : (
         <div></div>
+      )}
+      {activeService === "Product Design" && (
+        <div className="hidden lg:block border-t border-secondary-orange-100/10 pt-6">
+          <AllReviews />
+        </div>
       )}
     </div>
   );
