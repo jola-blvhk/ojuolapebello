@@ -126,7 +126,7 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       activeService.toLowerCase() === "spline interactive 3d" &&
       projectTitle === "Hi, I’m Molang interactive 3D : click to interact"
     ) {
-      window.location.href = "https://molang-spline3d.vercel.app/";
+      window.location.href = "https://my.spline.design/molang-60ec6596005fa063aa54a577871aa834/";
     } else if (
       activeService.toLowerCase() === "spline interactive 3d" &&
       projectTitle === "Black Girl 3D"
