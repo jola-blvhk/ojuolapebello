@@ -7,6 +7,7 @@ import Spaces from "/public/services/Spaces.png";
 import Becomy from "/public/services/Becomy.png";
 import Molang from "/public/services/molang.png";
 import BlackGirl from "/public/services/black girl.jpg";
+import RoomPractice from "/public/services/room-practice.jpg";
 import Hardsandscard from "/public/services/hardsandscard.png";
 import Mango from "/public/services/mango.png";
 import Indeed from "/public/services/indeed.png";
@@ -59,6 +60,11 @@ export const services = [
         id: 2,
         title: "Hi, I’m Molang interactive 3D : click to interact",
         imageSrc: Molang,
+      },
+      {
+        id: 3,
+        title: "Room Practice",
+        imageSrc: RoomPractice,
       },
     ],
   },
@@ -128,6 +134,12 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       window.location.href =
         "https://my.spline.design/blackgirl3d-7d478dcfacb23736d7b3eac706b42c3c/";
     } else if (
+      activeService.toLowerCase() === "spline interactive 3d" &&
+      projectTitle === "Room Practice"
+    ) {
+      window.location.href =
+        "https://my.spline.design/roompractice-dd1c10c6aa69c7e6e6347cc2bcefdc18/";
+    } else if (
       activeService.toLowerCase() === "copywriting" &&
       projectTitle === "Indeed"
     ) {
@@ -150,7 +162,6 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
     return <AboutUs />;
   }
 
-  console.log(activeService);
   return (
     <div className="grid gap-y-6 md:gap-y-8">
       {activeProjects ? (
