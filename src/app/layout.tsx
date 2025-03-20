@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Guaba Design Studio",
   description: "Guaba Design Studio",
   icons: {
-    icon: "/favicon.ico", // /public path
+    icon: "/favicon.ico",
   },
 };
 
