@@ -13,7 +13,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`relative z-0 w-full bg-[url(/button-bg.jpeg)] bg-cover  py-3 text-sm md:text-base cursor-pointer ${
+      className={`relative z-0 w-full bg-black bg-cover  py-3 text-sm md:text-base cursor-pointer ${
         className || ""
       }   text-center border-2 rounded-[10px] overflow-hidden`}
       onClick={onclick}
