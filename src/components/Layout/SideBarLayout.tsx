@@ -49,8 +49,7 @@ const SideBarLayout = () => {
             experiences
           </p>
           <div className="grid gap-y-[12px] md:gap-y-[18px]">
-            <Button text="Book a free consultation" color="orange" />
-            <Button text="Follow us" color="transparent" />
+            <Button text="Follow us" />
           </div>
         </div>
         <div className="grid gap-y-3">
