@@ -18,7 +18,8 @@ import HardsandsBrandingDesc from "/public/services/hardsandsbranding-desc.png";
 export const productDesignDetails = [
   {
     id: "1",
-    title: "NFTrace by PIKD : An NFT gamification app",
+    title:
+      "PIKD : A Token, location and Augmented reality based gamified platform",
     brandBgImage: PIKDBg,
     brandLogo: PIKDlogo,
     brandName: "NFTrace by PIKD",

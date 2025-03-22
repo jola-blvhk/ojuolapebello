@@ -23,11 +23,12 @@ interface ServicesProps {
 export const services = [
   {
     id: 1,
-    title: "product design",
+    title: "projects and case studies",
     projects: [
       {
         id: 1,
-        title: "NFTrace by PIKD : An NFT gamification app",
+        title:
+          "PIKD : A Token, location and Augmented reality based gamified platform",
         imageSrc: NFTTrace,
       },
       {
@@ -118,15 +119,16 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
   };
 
   const handleProjectClick = (projectTitle: string) => {
-    if (activeService.toLowerCase() === "product design") {
-      handleClick(projectTitle, "productdesign");
+    if (activeService.toLowerCase() === "projects and case studies") {
+      handleClick(projectTitle, "projectsandcasestudies");
     } else if (activeService.toLowerCase() === "branding") {
       handleClick(projectTitle, "branding");
     } else if (
       activeService.toLowerCase() === "spline interactive 3d" &&
       projectTitle === "Hi, I’m Molang interactive 3D : click to interact"
     ) {
-      window.location.href = "https://my.spline.design/molang-60ec6596005fa063aa54a577871aa834/";
+      window.location.href =
+        "https://my.spline.design/molang-60ec6596005fa063aa54a577871aa834/";
     } else if (
       activeService.toLowerCase() === "spline interactive 3d" &&
       projectTitle === "Black Girl 3D"
@@ -175,7 +177,7 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       ) : (
         <div></div>
       )}
-      {activeService === "Product Design" && (
+      {activeService === "projects and case studies" && (
         <div className="hidden lg:block border-t border-secondary-orange-100/10 pt-6">
           <AllReviews />
         </div>

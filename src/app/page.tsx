@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Guaba Design Studio | Guaba</title>
+        <title>Ojuolape&#39;s Portfolio </title>
       </Head>
       <HomePage />
     </>

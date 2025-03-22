@@ -7,7 +7,7 @@ import "animate.css/animate.min.css";
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Guaba Design Studio",
+  title: "Ojuolape's Portfolio",
   description: "Guaba Design Studio",
   icons: {
     icon: "/favicon.ico",
@@ -29,14 +29,7 @@ export default function RootLayout({
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body className={`bg-white  ${poppins.className}`}>
-        {/* <div className=" w-full   lg:w-[35%] xl:w-[30%] h-screen">
-          <SideBar />
-        </div> */}
-        {/* <div className="  h-full w-full m-5 "> */}
-        {children}
-        {/* </div> */}
-      </body>
+      <body className={`bg-white  ${poppins.className}`}>{children}</body>
     </html>
   );
 }

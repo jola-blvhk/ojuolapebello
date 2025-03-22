@@ -17,7 +17,7 @@ const Home = () => {
   useEffect(() => {
     const setInitialActiveService = () => {
       if (window.innerWidth >= 1024) {
-        setActiveService("Product Design");
+        setActiveService("Projects and Case Studies");
       }
     };
 
