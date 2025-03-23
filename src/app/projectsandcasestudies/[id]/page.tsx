@@ -27,7 +27,7 @@ const ProductDesignDetails = ({
   );
 
   const renderLongDescription = (description: any) => {
-    return description.split("\n\n").map((paragraph: string, index: number) => (
+    return description?.split("\n\n").map((paragraph: string, index: number) => (
       <p key={index} className="pb-5 md:pb-6 lg:pb-7">
         {paragraph}
       </p>
@@ -51,8 +51,9 @@ const ProductDesignDetails = ({
         reviewerJobPosition={detail?.reviewerJobPosition}
         longDescription={renderLongDescription(detail?.longDescription)}
         descriptionImage={detail?.descriptionImage}
+        screensImage={detail?.screensImage} // Conditionally pass if available
+        researchImage={detail?.researchImage}
       />
-     
     </>
   );
 };

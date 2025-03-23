@@ -3,13 +3,16 @@ import HardsandsLogo from "/public/services/hardsands-logo.png";
 import SpacesLogo from "/public/services/spaces-logo.png";
 import BecomyLogo from "/public/services/becomy-logo.png";
 import MangoLogo from "/public/services/mango-logo.png";
+import XLogo from "/public/services/x-logo.png";
 import MangoBg from "/public/services/mango-bg.png";
 import PIKDBg from "/public/services/pikd-bg.png";
+import XBg from "/public/services/x-bg.png";
 import HardsandsBg from "/public/services/hardsands-bg.png";
 import SpacesBg from "/public/services/spaces-bg.png";
 import BecomyBg from "/public/services/becomy-bg.png";
 import PIKDDesc from "/public/services/pikd-desc.png";
 import HardsandsDesc from "/public/services/hardsands-desc.png";
+import XDesc from "/public/services/x-desc.png";
 import SpacesDesc from "/public/services/spaces-desc.png";
 import BecomyDesc from "/public/services/becomy-desc.png";
 import MangoDesc from "/public/services/mango-desc.png";
@@ -33,10 +36,23 @@ export const productDesignDetails = [
     reviewerJobPosition: "Snr Eng",
     longDescription:
       "More than a buzzword - NFTrace unlocks the power of digital collectibles with our AR-powered platform. Connect with brands, businesses, and communities through real-world use cases and engage Gen Z like never before by exploring a new dimension of acquiring NFT collectibles and rewards. Player explores the map around  and Find NFTs that are created and shared by their original creator. Player can collect these NFTS for free. AR Camera sees these NFTs nearby 5 meters around in an augmented reality scene.",
-    descriptionImage: PIKDDesc,
+    screensImage: PIKDDesc,
+    researchImage: PIKDDesc
   },
   {
     id: "2",
+    title: "X App Optimization",
+    brandBgImage: XBg,
+    brandLogo: XLogo,
+    brandName: "X App Optimization",
+    description:
+      "Using Twitter as a case study, the goal of improving user experience through app optimization is to find and fix current flaws and inefficiencies inside the Twitter network.",
+    width: 70,
+    height: 120,
+    descriptionImage: XDesc,
+  },
+  {
+    id: "3",
     title: "Hardsands CRM (Customer relationship Platform) Platform",
     brandBgImage: HardsandsBg,
     brandLogo: HardsandsLogo,
@@ -55,7 +71,7 @@ export const productDesignDetails = [
   },
 
   {
-    id: "3",
+    id: "4",
     title: "Spaces Interior Marketplace",
     brandBgImage: SpacesBg,
     brandLogo: SpacesLogo,
@@ -73,7 +89,7 @@ export const productDesignDetails = [
     descriptionImage: SpacesDesc,
   },
   {
-    id: "4",
+    id: "5",
     title: "Becomy Page Builder",
     brandBgImage: BecomyBg,
     brandLogo: BecomyLogo,

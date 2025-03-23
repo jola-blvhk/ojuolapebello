@@ -6,7 +6,7 @@ const AllReviews = () => {
   return (
     <div>
       <h1 className="font-semibold text-base md:text-lg lg:text-xl">
-        Feedback from our clients
+        Feedback from my clients
       </h1>
 
       <div className="flex flex-col gap-y-6 md:gap-y-8 mt-4 md:mt-7">

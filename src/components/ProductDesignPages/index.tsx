@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DetailsLayout from "../Layout/DetailsLayout";
 import ReviewBox from "../Reviewbox/reviewbox";
 import Image from "next/image";
@@ -14,8 +14,16 @@ const ProductDesignPages = ({
   reviewerJobPosition,
   reviewerName,
   longDescription,
-  descriptionImage,
+  descriptionImage, // Default image used on other pages
+  screensImage, // Optional for specific pages
+  researchImage, // Optional for specific pages
 }: any) => {
+  // If both screensImage and researchImage exist, use state for toggling
+  const hasMultipleImages = screensImage && researchImage;
+  const [selectedTab, setSelectedTab] = useState<"screens" | "research">(
+    "screens"
+  );
+
   return (
     <DetailsLayout
       brandBgImage={brandBgImage}
@@ -40,12 +48,51 @@ const ProductDesignPages = ({
           {longDescription}
         </h3>
 
-        <div className="relative w-full h-auto  mt-3 md:mt-4 lg:mt-5">
+        {/* Show toggle buttons only if multiple images exist */}
+        {hasMultipleImages && (
+          <div className="flex space-x-4 mt-4">
+            <button
+              onClick={() => setSelectedTab("screens")}
+              className={`px-4 py-2 rounded-lg border ${
+                selectedTab === "screens"
+                  ? "bg-[#0D1D4A] text-white"
+                  : "border-gray-400 text-gray-700"
+              }`}
+            >
+              Screens
+            </button>
+            <button
+              onClick={() => setSelectedTab("research")}
+              className={`px-4 py-2 rounded-lg border ${
+                selectedTab === "research"
+                  ? "bg-[#0D1D4A] text-white"
+                  : "border-gray-400 text-gray-700"
+              }`}
+            >
+              Research
+            </button>
+          </div>
+        )}
+
+        {/* Show the selected image if toggle is available, otherwise show the default image */}
+        <div className="relative w-full h-auto mt-3 md:mt-4 lg:mt-5">
           <Image
             layout="intrinsic"
-            src={descriptionImage}
-            alt="project images"
-            className=" object-contain w-full h-full"
+            src={
+              hasMultipleImages
+                ? selectedTab === "screens"
+                  ? screensImage
+                  : researchImage
+                : descriptionImage // Default for pages that don’t have multiple images
+            }
+            alt={
+              hasMultipleImages
+                ? selectedTab === "screens"
+                  ? "Screens"
+                  : "Research"
+                : "Project Image"
+            }
+            className="object-contain w-full h-full"
           />
         </div>
       </div>

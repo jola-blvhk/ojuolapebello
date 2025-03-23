@@ -58,7 +58,7 @@ const SideBar: React.FC<SideBarProps> = ({
   const year = new Date().getFullYear();
 
   return (
-    <div className="relative grid gap-y-6 lg:gap-y-0 h-full justify-between border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[20px]">
+    <div className="relative grid gap-y-6 lg:gap-y-0 h-full justify-between border-r border-[#D9D9D9] px-[30px] md:px-[34px] py-[20px] md:py-[20px]">
       <div className="grid justify-between pb-4 gap-y-5 h-full">
         <div className="border-b pb-4 border-[#D9D9D9] ">
           <Image
@@ -179,7 +179,7 @@ const SideBar: React.FC<SideBarProps> = ({
           <AllReviews />
         </div>
       </div>
-  
+
       {isPopupOpen && (
         <div
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50"

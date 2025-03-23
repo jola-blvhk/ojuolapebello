@@ -2,6 +2,7 @@ import React from "react";
 import ProductBox from "../ProductBox.tsx";
 import { Project } from "@/types/index.js";
 import NFTTrace from "/public/services/NFTTrace.png";
+import X from "/public/services/X.png";
 import Hardsands from "/public/services/Hardsands.png";
 import Spaces from "/public/services/Spaces.png";
 import Becomy from "/public/services/Becomy.png";
@@ -32,17 +33,22 @@ export const services = [
         imageSrc: NFTTrace,
       },
       {
-        id: 2,
+        id: 3,
         title: "Hardsands CRM (Customer relationship Platform) Platform",
         imageSrc: Hardsands,
       },
       {
-        id: 3,
+        id: 4,
         title: "Spaces Interior Marketplace",
         imageSrc: Spaces,
       },
       {
-        id: 4,
+        id: 2,
+        title: "X App Optimization",
+        imageSrc: X,
+      },
+      {
+        id: 5,
         title: "Becomy Page Builder",
         imageSrc: Becomy,
       },
@@ -164,6 +170,7 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
     return <AboutUs />;
   }
 
+
   return (
     <div className="grid gap-y-6 md:gap-y-8">
       {activeProjects ? (
@@ -177,7 +184,7 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
       ) : (
         <div></div>
       )}
-      {activeService === "projects and case studies" && (
+      {activeService === "Projects and Case Studies" && (
         <div className="hidden lg:block border-t border-secondary-orange-100/10 pt-6">
           <AllReviews />
         </div>
