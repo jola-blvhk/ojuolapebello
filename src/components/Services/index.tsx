@@ -1,4 +1,4 @@
-import React from "react";
+import React, { act } from "react";
 import ProductBox from "../ProductBox.tsx";
 import { Project } from "@/types/index.js";
 import NFTTrace from "/public/services/NFTTrace.png";
@@ -16,6 +16,7 @@ import Copypress from "/public/services/copypress.png";
 import VPNOverview from "/public/services/vpnoverview.png";
 import AboutUs from "../AboutUs";
 import AllReviews from "../AllReviews";
+import Art from "../ArtPage";
 
 interface ServicesProps {
   activeService: string;
@@ -44,7 +45,7 @@ export const services = [
       },
       {
         id: 2,
-        title: "X App Optimization",
+        title: "X App Optimization (Case study)",
         imageSrc: X,
       },
       {
@@ -166,10 +167,16 @@ const Services: React.FC<ServicesProps> = ({ activeService }) => {
     }
   };
 
-  if (activeService.toLowerCase() === "about us") {
+  if (activeService.toLowerCase() === "art") {
+    return <Art />;
+  }
+  if (activeService.toLowerCase() === "resume") {
+    window.location.href =
+      "https://drive.google.com/file/d/134DJ7dBBGusnaeYbpkJDZtnXC0trlsrT/view?usp=sharing";
+  }
+  if (activeService.toLowerCase() === "about me") {
     return <AboutUs />;
   }
-
 
   return (
     <div className="grid gap-y-6 md:gap-y-8">

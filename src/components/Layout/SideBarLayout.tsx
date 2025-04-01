@@ -10,9 +10,9 @@ const SideBarLayout = () => {
   const services = [
     "Product Design",
     "Spline Interactive 3D",
-    "Branding",
-    "Copywriting",
-    "About us",
+    "Art",
+    "About me",
+    "Resume",
   ];
 
   const clients = [
@@ -32,7 +32,7 @@ const SideBarLayout = () => {
 
   return (
     <div className="grid h-full justify-between  border-r border-secondary-orange-100/10 px-[30px] md:px-[34px] py-[20px] md:py-[30px]">
-      <div className=" grid justify-between pb-4 gap-y-6   h-full">
+      <div className=" grid justify-between pb-4 gap-y-6  h-full">
         <div className="border-b border-secondary-orange-100/10 pb-6">
           <Image
             src={Logo}

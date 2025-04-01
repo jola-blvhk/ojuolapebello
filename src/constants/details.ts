@@ -11,6 +11,7 @@ import HardsandsBg from "/public/services/hardsands-bg.png";
 import SpacesBg from "/public/services/spaces-bg.png";
 import BecomyBg from "/public/services/becomy-bg.png";
 import PIKDDesc from "/public/services/pikd-desc.png";
+import PIKDResearch from "/public/services/pikd-research.png"
 import HardsandsDesc from "/public/services/hardsands-desc.png";
 import XDesc from "/public/services/x-desc.png";
 import SpacesDesc from "/public/services/spaces-desc.png";
@@ -33,15 +34,15 @@ export const productDesignDetails = [
     review:
       "I had the pleasure of collaborating with this designer. They are incredibly fast at evaluating feedback from engineers and quickly solving problems. They have keen eye for aesthetics, and their ability to create beautiful, colorful UI designs is simply outstanding. Their designs effectively capture the gaming feel and are a testament to their skill and creativity.",
     reviewerName: "Purevsuren Adiyasuren",
-    reviewerJobPosition: "Snr Eng",
+    reviewerJobPosition: "Snr Eng at PIKD",
     longDescription:
       "More than a buzzword - NFTrace unlocks the power of digital collectibles with our AR-powered platform. Connect with brands, businesses, and communities through real-world use cases and engage Gen Z like never before by exploring a new dimension of acquiring NFT collectibles and rewards. Player explores the map around  and Find NFTs that are created and shared by their original creator. Player can collect these NFTS for free. AR Camera sees these NFTs nearby 5 meters around in an augmented reality scene.",
     screensImage: PIKDDesc,
-    researchImage: PIKDDesc
+    researchImage: PIKDResearch
   },
   {
     id: "2",
-    title: "X App Optimization",
+    title: "X App Optimization (Case study)",
     brandBgImage: XBg,
     brandLogo: XLogo,
     brandName: "X App Optimization",

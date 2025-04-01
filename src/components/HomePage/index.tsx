@@ -41,7 +41,7 @@ const Home = () => {
   return (
     <main className="bg-white h-screen lg:flex w-full">
       <div
-        className={`w-full lg:w-[35%] xl:w-[28%] lg:h-screen ${
+        className={`w-full lg:w-[35%] xl:w-[28%] lg:h-screen overflow-y-scroll scrollbar-hide ${
           !showSidebar && "hidden lg:block"
         }`}
       >
@@ -78,13 +78,7 @@ const Home = () => {
           )}
           <div className="grid gap-16 md:gap-20">
             <Services activeService={activeService} />
-            {/* <div
-              className={`hidden ${
-                activeService === "About us" ? "hidden" : "lg:block"
-              } `}
-            >
-              <AllReviews />
-            </div> */}
+         
           </div>
         </div>
       </div>

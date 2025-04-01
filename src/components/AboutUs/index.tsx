@@ -1,44 +1,64 @@
 import React from "react";
+import Image from "next/image";
+import Certification1 from "../../../public/certification/cert-1.png";
 
 const AboutUs = () => {
   return (
     <main className="grid gap-5 md:gap-6 lg:gap-10 text-primary-black-90 text-sm md:text-base max-w-[1000px] mx-auto">
       <div>
         <h2 className="hidden lg:block font-bold text-xl mb-5 lg:mb-6">
-          About Us
+          About Me
         </h2>
-        <p>
-          Guaba was born out of a passion for design and a desire to make a
-          difference in the creative industry. Our journey began with a small
-          team of enthusiastic designers who shared a common goal: creating
-          stunning designs that tell a story. Over the years, we have grown into
-          a full-fledged design studio, working with clients from various
-          industries and helping them achieve their creative goals while also
-          considering their business requirements, goals and parameters.
-        </p>
+        <div className="space-y-3 md:space-y-5 lg:space-y-6">
+          <p>
+            I am a multidisciplinary designer and researcher focused on building
+            meaningful digital products and experiences. i am also a certified
+            Product manager.
+          </p>
+          <p>
+            As a designer with a background and degree in architecture and
+            masters in Design and Visual culture at IADE Creative University
+            Lisbon, Portugal, I bring a unique perspective and skill set to this
+            role, with a diverse set of skills that includes 3D modeling, user
+            research, interaction design, UI design, and animation.{" "}
+          </p>
+          <p>
+            My background in architecture has given me a keen eye for design and
+            an appreciation for the importance of user experience. Through my
+            experience, I am able to create visually stunning and immersive user
+            interfaces that enhance the overall user experience.{" "}
+          </p>
+          <p>
+            My expertise in user research allows me to understand user behavior
+            and design interfaces that are intuitive and easy to use.
+            Additionally, I can build dynamic, captivating user interfaces that
+            are both aesthetically beautiful and simple to use.{" "}
+          </p>
+          <p>
+            Last but not least, my background in animation adds an additional
+            level of interaction and engagement, bringing concepts to life and
+            creating a more engaging user experience. I have proven over my
+            career that I can collaborate with cross-functional teams to create
+            creative and efficient design solutions that serve organizational
+            goals. I&#39;m dedicated to keeping up with the most recent design
+            approaches and trends, and I&#39;m constantly seeking for ways to
+            sharpen my abilities.
+          </p>
+        </div>
       </div>
       <div>
-        <h3 className="font-bold mb-3 md:mb-5 lg:mb-6">How we work</h3>
-        <p>
-          Our approach involves understanding user needs, researching the market
-          and combine that with your business requirements, thereby creating
-          designs that are not only aesthetically pleasing but also functional
-          and purposeful. Collaboration is at the heart of our process. We work
-          closely with our clients at every stage, We do this by clear and
-          regular communication through slack and ensuring that the final
-          product aligns perfectly with their vision.
-        </p>
-      </div>
-      <div>
-        <h3 className="font-bold mb-3 md:mb-5 lg:mb-6">Why Choose Guaba?</h3>
-        <p>
-          Choosing Guaba means partnering with a design studio dedicated to your
-          success. Our expertise in UX/UI design, branding, spline interactive
-          3Ds, and copywriting, combined with our focus on innovation, quality,
-          and customer-centricity, ensures exceptional, forward-thinking designs
-          while also considering your business requirements, goals and
-          parameters. Let&apos;s create something amazing together.
-        </p>
+        <h3 className="font-bold mb-3 md:mb-5 lg:mb-6 text-lg md:text-xl">
+          Certifications
+        </h3>
+        <div>
+          <Image
+            width={500}
+            height={500}
+            src={Certification1.src}
+            alt="Certification"
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </main>
   );

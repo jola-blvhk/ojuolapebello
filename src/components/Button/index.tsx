@@ -13,13 +13,13 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <button
-      className={`relative z-0 w-full bg-black bg-cover  py-3 text-sm md:text-base cursor-pointer ${
-        className || ""
+      className={`relative z-0 w-full border-2    bg-cover  py-3 text-sm md:text-base cursor-pointer ${
+        className || "text-white"
       }   text-center border-2 rounded-[10px] overflow-hidden`}
       onClick={onclick}
     >
       {/* Text */}
-      <p className="relative z-50 text-white tracking-wider">{text}</p>
+      <p className="relative z-50  ">{text}</p>
     </button>
   );
 };

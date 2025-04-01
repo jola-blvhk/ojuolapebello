@@ -25,9 +25,9 @@ const SideBar: React.FC<SideBarProps> = ({
   const services = [
     "Projects and Case Studies",
     "Spline Interactive 3D",
-    "Branding",
-    "Copywriting",
-    "About us",
+    "Art",
+    "About me",
+    "Resume",
   ];
 
   const skills = [
@@ -123,8 +123,21 @@ const SideBar: React.FC<SideBarProps> = ({
             in Architecture and Masters in Design and Visual culture at IADE
             Creative University Lisbon. I am also a certified Product manager.
           </p>
-          <div className="">
-            <Button text="Send me a mail" onclick={handleFollowUsClick} />
+          <div className="space-y-4">
+            <Button
+              text="Send me a mail"
+              className="bg-black border-[#5F5E5D] text-white"
+              onclick={() =>
+                (window.location.href = "mailto:ojuolapebello99@gmail.com")
+              }
+            />
+            <Button
+              text="Behance"
+              className="text-black border-[#D9D9D9]"
+              onclick={() =>
+                window.open("https://www.behance.net/ojuolapebello", "_blank")
+              }
+            />
           </div>
         </div>
 

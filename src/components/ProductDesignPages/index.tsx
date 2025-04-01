@@ -50,23 +50,23 @@ const ProductDesignPages = ({
 
         {/* Show toggle buttons only if multiple images exist */}
         {hasMultipleImages && (
-          <div className="flex space-x-4 mt-4">
+          <div className="flex gap-x-[7px]  mx-auto mt-4 w-fit ">
             <button
               onClick={() => setSelectedTab("screens")}
-              className={`px-4 py-2 rounded-lg border ${
+              className={`px-4 py-[10px] rounded-[10px] border-2 w-[100px] sm:w-[160px]  ${
                 selectedTab === "screens"
                   ? "bg-[#0D1D4A] text-white"
-                  : "border-gray-400 text-gray-700"
+                  : "border-[#D9D9D9] text-[#444444]"
               }`}
             >
               Screens
             </button>
             <button
               onClick={() => setSelectedTab("research")}
-              className={`px-4 py-2 rounded-lg border ${
+              className={`px-4 py-[10px] rounded-[10px] border-2 w-[100px] sm:w-[160px] ${
                 selectedTab === "research"
-                  ? "bg-[#0D1D4A] text-white"
-                  : "border-gray-400 text-gray-700"
+                  ? "bg-[#0D1D4A]  text-white"
+                  : "border-[#D9D9D9] text-[#444444]"
               }`}
             >
               Research
