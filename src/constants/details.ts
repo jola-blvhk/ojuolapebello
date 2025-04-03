@@ -11,7 +11,7 @@ import HardsandsBg from "/public/services/hardsands-bg.png";
 import SpacesBg from "/public/services/spaces-bg.png";
 import BecomyBg from "/public/services/becomy-bg.png";
 import PIKDDesc from "/public/services/pikd-desc.png";
-import PIKDResearch from "/public/services/pikd-research.png"
+import PIKDResearch from "/public/services/pikd-research.png";
 import HardsandsDesc from "/public/services/hardsands-desc.png";
 import XDesc from "/public/services/x-desc.png";
 import SpacesDesc from "/public/services/spaces-desc.png";
@@ -36,9 +36,9 @@ export const productDesignDetails = [
     reviewerName: "Purevsuren Adiyasuren",
     reviewerJobPosition: "Snr Eng at PIKD",
     longDescription:
-      "More than a buzzword - NFTrace unlocks the power of digital collectibles with our AR-powered platform. Connect with brands, businesses, and communities through real-world use cases and engage Gen Z like never before by exploring a new dimension of acquiring NFT collectibles and rewards. Player explores the map around  and Find NFTs that are created and shared by their original creator. Player can collect these NFTS for free. AR Camera sees these NFTs nearby 5 meters around in an augmented reality scene.",
+      "More than a buzzword -PIKD unlocks the power of digital collectibles with our AR-powered platform. Connect with brands, businesses, and communities through real-world use cases and engage Gen Z like never before by exploring a new dimension of acquiring Token collectibles and rewards. Player explores the map around  and Find Tokens that are created and shared by their original creator i.e Brands. Player can collect these Tokens for free. AR Camera sees these NFTs nearby 5 meters around in an augmented reality scene.",
     screensImage: PIKDDesc,
-    researchImage: PIKDResearch
+    researchImage: PIKDResearch,
   },
   {
     id: "2",

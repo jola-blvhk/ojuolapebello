@@ -34,20 +34,21 @@ export const services = [
         imageSrc: NFTTrace,
       },
       {
-        id: 3,
+        id: 2,
         title: "Hardsands CRM (Customer relationship Platform) Platform",
         imageSrc: Hardsands,
+      },
+      {
+        id: 3,
+        title: "X App Optimization (Case study)",
+        imageSrc: X,
       },
       {
         id: 4,
         title: "Spaces Interior Marketplace",
         imageSrc: Spaces,
       },
-      {
-        id: 2,
-        title: "X App Optimization (Case study)",
-        imageSrc: X,
-      },
+
       {
         id: 5,
         title: "Becomy Page Builder",
